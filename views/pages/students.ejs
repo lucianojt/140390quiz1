@@ -9,17 +9,23 @@
         </tr>
     </thead>
     <tbody>
-        <% products.forEach(function(product){%>
+        <% students.forEach(function(students){%>
             <tr>
                 <td scope="row">
-                    <%= product.id%>
+                    <%= students.sid%>
                 </td>
-                <td>
-                    <%= product.title%>
+                <td scope="row">
+                    <%= students.title%>
                 </td>
-                <td>
-                    <%= product.price%>
+               
+                <td scope="row">
+                    <%= students.firstname%>
                 </td>
+               
+                <td scope="row">
+                    <%= students.lastname%>
+                </td>
+               
             </tr>
             <%}); %>
     </tbody>

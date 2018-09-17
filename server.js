@@ -27,4 +27,15 @@ connection.query('SELECT 1 + 1 AS solution', function (err, rows, fields) {
 
 connection.end()
 
+app.get('/students', function (req, res) {
+    connection.connect()
+    connection.query('SELECT * students', function (err, rows, fields) {
+        if (err) throw err
+      
+        console.log('The solution is: ', rows[0].solution)
+      })
+      connection.end()
+    
+});
+
 app.listen(2222);
